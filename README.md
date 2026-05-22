@@ -20,3 +20,7 @@ Tutu is useful for everyone on the financial journey — from the new graduate w
 ## Why does Tutu only have a desktop version?
 
 This is a deliberate choice to protect your privacy. Tutu will NEVER upload any of your financial information to the cloud. Everything stays on your local computer — forever. The only internet connection Tutu ever makes is to Yahoo Finance to fetch stock prices when you request a snapshot update.
+
+## Need Support or have feedback or feature request?
+
+Email us at lihua.cao2007@gmail.com. This is only a hobby project so far, but we will try to respond as fast as we can.
