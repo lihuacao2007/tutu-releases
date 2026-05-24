@@ -55,16 +55,18 @@ Email us at lihua.cao2007@gmail.com. This is only a hobby project so far, but we
 ## TODOs
 
 ### 1. Support more life events
-- 1.1 Double-check that equity from each mortgage payment is correctly added to the real estate asset
-- 1.2 Add a "Gift to kid" life event
+- 1.1 Add a "Gift to kid" life event
 
 ### 2. Improve reminders and tips
 - 2.1 Add reminders to update asset snapshots, or surface new tips when relevant
-- 2.2 Add various financial tips based on current asset portfolio or income — such as best time for Roth conversion, exercising capital gains from stocks, asset rebalancing, etc.
-- 2.3 Add corresponding tax optimization suggestions
+- 2.2 Add reminder on financial tips
 
-### 3. Improve tax-related predictions
-- 3.1 Add a tax obligation chart
-- 3.2 Consider tax treatment in withdrawals (Roth vs. traditional retirement accounts, or capital gains tax)
-- 3.3 Add configuration to allow users to choose their preferred withdrawal priority across different asset types
-- 3.4 Customize future expenses for different year ranges
+### 3. Improve tax and withdrawal strategy
+- 3.1 Consider tax treatment in withdrawals (Roth vs. traditional retirement accounts, or capital gains tax)
+- 3.2 Add configuration to allow users to choose their preferred withdrawal priority across different asset types
+- 3.3 Add various financial tips based on current asset portfolio or income — such as best time for Roth conversion, exercising capital gains from stocks, asset rebalancing, etc.
+  - Add corresponding tax optimization suggestions
+
+### 4. Projection improvements
+- 4.1 Customize future expenses for different year ranges
+- 4.2 Add a what-if feature to explore scenarios without changing existing planning
