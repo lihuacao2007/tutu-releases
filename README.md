@@ -27,6 +27,20 @@ Email us at lihua.cao2007@gmail.com. This is only a hobby project so far, but we
 
 ## Release Notes
 
+### v1.0.11 — 2026-05-24
+
+**Income and Tax panel (new)**
+- Added "Income and Tax" sub-menu under Retirement Planning in the sidebar.
+- Bar chart showing taxable income components (salary, rental, interest/dividend, Social Security, 401k/IRA withdrawal, other) stacked per year, plus a non-taxable income bar.
+- Overlay line for total income and a right-axis line for effective tax rate %.
+- Detail table with years as columns, showing: all taxable income rows, Taxable Income Subtotal, Pre-Tax Contributions, Standard Deduction, Net Taxable Income, each federal tax bracket row (rate + range with income falling into that bracket), Estimated Tax, Effective Tax Rate, Non-Taxable Income, and Income After Tax.
+- Clicking a chart bar scrolls the table to align that year column; clicking a table column header highlights the corresponding chart bar.
+
+**Retirement projection improvements**
+- Annual equity gain from mortgage principal payments is now added to the real estate asset value each year in the projection — previously only the starting equity and market appreciation were tracked.
+
+---
+
 ### v1.0.10 — 2026-05-23
 
 **Real Estate property improvements**
