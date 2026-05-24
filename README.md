@@ -28,8 +28,8 @@ Email us at lihua.cao2007@gmail.com. This is only a hobby project so far, but we
 ## TODOs
 
 ### 1. Support more life events
-- 1.1 Add a "pay off mortgage" life event
-- 1.2 Double-check that equity from each mortgage payment is correctly added to the real estate asset
+- 1.1 Double-check that equity from each mortgage payment is correctly added to the real estate asset
+- 1.2 Add a "Gift to kid" life event
 
 ### 2. Improve reminders and tips
 - 2.1 Add reminders to update asset snapshots, or surface new tips when relevant
@@ -40,3 +40,4 @@ Email us at lihua.cao2007@gmail.com. This is only a hobby project so far, but we
 - 3.1 Add a tax obligation chart
 - 3.2 Consider tax treatment in withdrawals (Roth vs. traditional retirement accounts, or capital gains tax)
 - 3.3 Add configuration to allow users to choose their preferred withdrawal priority across different asset types
+- 3.4 Customize future expenses for different year ranges
