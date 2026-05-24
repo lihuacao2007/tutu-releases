@@ -25,6 +25,33 @@ This is a deliberate choice to protect your privacy. Tutu will NEVER upload any 
 
 Email us at lihua.cao2007@gmail.com. This is only a hobby project so far, but we will try to respond as fast as we can.
 
+## Release Notes
+
+### v1.0.10 — 2026-05-23
+
+**Real Estate property improvements**
+- Separated "Monthly Rental" (gross rent) from mortgage payments to eliminate ambiguity — rental income and mortgage costs are now tracked independently.
+- Added **HOA** field (amount + frequency: Monthly / Quarterly / Yearly) to the property add/edit dialog.
+- Added **Annual Property Tax Rate (%)** field to the property add/edit dialog.
+- Added **Monthly Mortgage Payment** as a read-only auto-computed field in the Mortgage Info section of the property dialog.
+
+**Projection Details table improvements**
+- New **Mortgage Payment** expense row showing all active DB property mortgage payments.
+- New **Housing Cost** expense row aggregating HOA fees and property taxes across all properties, inflation-adjusted year over year.
+- **Monthly Rental** column renamed and semantics clarified — always shows gross rental income (zero for non-rental properties).
+
+**Life event improvements**
+- **Pay Off Mortgage** life event: pick a property from your DB, auto-calculates current loan balance, deducts from savings (overflows to stock), and removes future mortgage payments from the projection.
+- **Sell a House (rental)**: correctly routes appreciation to taxable income and equity recovery to stock.
+- Rental property sale appreciation now appears in the **Other Income** row of Projection Details.
+
+**Privacy & reliability**
+- Removed third-party property valuation API — property values are now updated manually to eliminate internet dependency and protect financial privacy.
+
+---
+
+### v1.0.9 — 2026-05-22
+
 ## TODOs
 
 ### 1. Support more life events
