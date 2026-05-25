@@ -6,7 +6,7 @@ Tutu is a financial planning and retirement planning software that helps you tra
 
 ## Who is it for?
 
-Tutu is useful for everyone on the financial journey — from the new graduate who just started their first job and wants to build good habits, to the person who is approaching retirement or already retired and wants to stay on top of their financial health.
+Tutu is useful for everyone on the financial journey — from the new graduate who just started their first job and wants to build good habits, to the person who is approaching retirement and would like to access their financial readiness or already retired and wants to stay on top of their financial health.
 
 ## What features does it have?
 
@@ -15,7 +15,10 @@ Tutu is useful for everyone on the financial journey — from the new graduate w
 - **Real Estate** — Manage your property holdings, track values, rental income, and mortgage details.
 - **Saving** — Monitor your savings and cash accounts over time.
 - **Retirement** — Track your retirement accounts (401k, IRA, etc.) and watch them grow.
-- **Retirement Planning** — A step-by-step planning wizard that projects your retirement trajectory, models withdrawals (fixed, percentage, or RMD), accounts for Social Security, inflation, spouse income, and life events such as home purchases or sales.
+- **Retirement Planning** — A step-by-step configuration wizard that sets up your retirement plan, modeling withdrawals (fixed, percentage, or RMD), Social Security, inflation, spouse income, and planned life events.
+- **Retirement Estimation** — A detailed year-by-year projection chart and table showing how your assets will grow and be drawn down through retirement.
+- **Life Events** — Plan major financial life events (buying or selling a home, college costs, new baby, job loss, inheritance, wedding, medical expenses, and more) and see their impact on your retirement trajectory.
+- **Income and Tax** — Project your year-by-year income from all sources alongside a federal income tax estimate, so you can plan withdrawals with tax efficiency in mind.
 
 ## Why does Tutu only have a desktop version?
 
@@ -26,6 +29,22 @@ This is a deliberate choice to protect your privacy. Tutu will NEVER upload any 
 Email us at lihua.cao2007@gmail.com. This is only a hobby project so far, but we will try to respond as fast as we can.
 
 ## Release Notes
+
+### v1.0.12 — 2026-05-24
+
+**Dark mode polish**
+- All panels (Retirement Planning, Life Events, Income and Tax) now fully respect dark mode — panel headers, borders, and section backgrounds are consistent with other panels.
+- Life Events table no longer shows a white border around the scroll area in dark mode.
+- Retirement Planning wizard: the "Do you have a spouse" checkbox and "Back" navigation button now correctly use the dark theme background instead of rendering white.
+- Retirement Financial Estimation bar chart: tooltip now uses the correct light/dark background and border colors — previously showed a dark tooltip even in light mode.
+- Chart backgrounds (Overview, Retirement Financial Estimation, Income and Tax Projection) are now consistent with the theme across both modes.
+- Navigation panel version label is now readable in dark mode.
+
+**About page and README updated**
+- "What features does it have" now lists all panels: Overview, Stock, Real Estate, Saving, Retirement, Retirement Planning, Retirement Estimation, Life Events, and Income and Tax.
+- "Who is it for" section updated to mention financial readiness assessment for those approaching retirement.
+
+---
 
 ### v1.0.11 — 2026-05-24
 
