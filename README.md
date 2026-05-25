@@ -87,19 +87,18 @@ Email us at lihua.cao2007@gmail.com. This is only a hobby project so far, but we
 
 ## TODOs
 
-### 1. Support more life events
-- 1.1 Add a "Gift to kid" life event
+### 1. Support More Life Events
+- Add a "Gift to kid" life event
 
-### 2. Improve reminders and tips
-- 2.1 Add reminders to update asset snapshots, or surface new tips when relevant
-- 2.2 Add reminder on financial tips
+### 2. Improve Reminders
+- Add reminders to update asset snapshots
+- Add reminders on financial tips and actions to take
 
-### 3. Improve tax and withdrawal strategy
-- 3.1 Consider tax treatment in withdrawals (Roth vs. traditional retirement accounts, or capital gains tax)
-- 3.2 Add configuration to allow users to choose their preferred withdrawal priority across different asset types
-- 3.3 Add various financial tips based on current asset portfolio or income — such as best time for Roth conversion, exercising capital gains from stocks, asset rebalancing, etc.
-  - Add corresponding tax optimization suggestions
+### 3. Improve Tax and Withdrawal Strategy
+- Increase the standard deduction projection based on historical increases or the configured inflation rate
+- Consider tax treatment in withdrawals (Roth vs. traditional retirement accounts, or capital gains tax)
+- Add configuration to allow users to choose their preferred withdrawal priority across different asset types
 
-### 4. Projection improvements
-- 4.1 Customize future expenses for different year ranges
-- 4.2 Add a what-if feature to explore scenarios without changing existing planning
+### 4. Projection Improvements
+- Add a what-if scenario feature to explore alternatives without changing existing planning
+- Add a financial scan that surfaces tips and tax optimizations based on the current asset portfolio and income — e.g. best time for a Roth conversion, best time to realize capital gains from stocks, asset allocation adjustments based on age and retirement progress
