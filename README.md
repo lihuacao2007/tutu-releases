@@ -30,6 +30,38 @@ Email us at lihua.cao2007@gmail.com. This is only a hobby project so far, but we
 
 ## Release Notes
 
+### v1.0.13 — 2026-05-25
+
+**Future Expenses panel (new)**
+- Added "Expenses" sub-menu under Retirement Planning in the sidebar.
+- Year-by-year table showing inflation-adjusted annual expenses for Housing, Healthcare, Food, Transport, Entertainment, and Other.
+- Two read-only rows at the top of the table display your age (and spouse's age if configured) for each projected year — making it easy to spot which year to customize.
+- Double-click any expense cell to open an edit dialog with annual and monthly amount fields that auto-sync with each other (edit one, the other updates instantly).
+- "Bulk update through year" dropdown in the edit dialog labels each year with ages (e.g. "2035 — Me 52, Spouse 50") so you know exactly what life stage you are customizing for.
+- Overridden cells are highlighted in blue; "Reset to Defaults" button clears all overrides.
+- Expense overrides feed directly into the Living Expenses row in Retirement Financial Estimation.
+- A note below the table reminds users to use Life Events for one-time costs (tuition, mortgage payoff, etc.) rather than this panel.
+
+**Retirement Finance Literacy panel (new)**
+- Added "Finance Literacy" nav item above About in the sidebar.
+- 16 financial and retirement concepts explained in plain language, in alphabetical order: 401(k)/403(b), Capital Gain, Compound Interest, Inflation, Medicare, Mortgage, Net Worth, Property Tax, RMD, Retirement Plans & Contributions, Roth IRA & Roth IRA Conversion, Sequence of Returns Risk, Social Security, Tax Brackets, Traditional IRA, and Withdrawal Rate.
+
+**Dark Mode toggle redesigned**
+- Replaced the small icon-only toggle with a full-width row showing a pill-style switch and a "Dark Mode" label — making its purpose immediately clear.
+
+**Light mode bug fixes**
+- Cancel button in the "Add / Edit Retirement Plan" dialog no longer shows a dark background in light mode.
+- Mouse-over of type-selection, Cancel, and Back buttons in the "Add Life Event" dialog now uses the correct theme-aware hover color in both light and dark modes.
+
+**Projection Details table**
+- Renamed "Monthly Rental" row to "Rental" — the value has always been the annual figure.
+
+**Windows installer (new)**
+- Starting with this release, a Windows installer (`Tutu-1.0.13-Windows.exe`) is provided alongside the macOS disk image (`Tutu-1.0.13-macOS.dmg`).
+- Binary filenames now include the OS to avoid ambiguity.
+
+---
+
 ### v1.0.12 — 2026-05-24
 
 **Dark mode polish**
