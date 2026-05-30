@@ -213,19 +213,16 @@ Email us at lihua.cao2007@gmail.com. This is only a hobby project so far, but we
 
 ## TODOs
 
-### 1. Support More Life Events
-- Add a "Gift to kid" life event
-
-### 2. Improve Reminders
+### 1. Improve Reminders
 - Add reminders to update asset snapshots
 - Add reminders on financial tips and actions to take
 
-### 3. Improve Tax and Withdrawal Strategy
+### 2. Improve Tax and Withdrawal Strategy
 - Add capital gain tax in the retirement planning calculation when selling stock assets to cover expenses
 - Consider tax treatment in withdrawals (Roth vs. traditional retirement accounts, or capital gains tax)
 - Add configuration to allow users to choose their preferred withdrawal priority across different retirement asset types
 
-### 4. Retirement Analysis
+### 3. Retirement Analysis
 - Add a what-if scenario feature to explore alternatives without changing existing planning
 - Add a manual scan that surfaces financial tips and tax optimizations based on the current asset portfolio and income — e.g. best time for a Roth conversion, best time to realize capital gains from stocks, asset allocation adjustments based on age and progress toward retirement
 - Add basic questions with personalized answers based on the user's retirement data
