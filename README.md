@@ -1,4 +1,4 @@
-# About Tutu
+# About Tutu &nbsp; ![GitHub Downloads](https://img.shields.io/github/downloads/lihuacao2007/tutu-releases/total?label=downloads&color=blue)
 
 ## What is Tutu?
 
@@ -34,6 +34,67 @@ Tutu is useful for everyone on the financial journey — from the new graduate w
 ## Why does Tutu only have a desktop version?
 
 This is a deliberate choice to protect your privacy. Tutu will NEVER upload any of your financial information to the cloud. Everything stays on your local computer — forever. The only internet connection Tutu ever makes is to Yahoo Finance to fetch stock prices when you request a snapshot update or ping Github for the latest version and download it if detected.
+
+## Screenshots
+
+### Asset Management
+
+| Overview | Stock |
+|----------|-------|
+| ![Overview](screenshots/overview.png) | ![Stock](screenshots/stock.png) |
+
+| Real Estate | Saving |
+|-------------|--------|
+| ![Real Estate](screenshots/real-estate.png) | ![Saving](screenshots/saving.png) |
+
+| Retirement | |
+|------------|--|
+| ![Retirement](screenshots/retirement.png) | |
+
+### Retirement Planning
+
+| Retirement Planning | Retirement Estimation |
+|---------------------|-----------------------|
+| ![Retirement Planning](screenshots/retirement-planning.png) | ![Retirement Estimation](screenshots/retirement-estimation.png) |
+
+| Life Events | Income and Tax |
+|-------------|----------------|
+| ![Life Events](screenshots/life-events.png) | ![Income and Tax](screenshots/income-tax.png) |
+
+| Expenses | |
+|----------|--|
+| ![Expenses](screenshots/expenses.png) | |
+
+## I got an installation error on Mac, what should I do?
+
+Tutu is currently not signed by an Apple developer certificate, so macOS Gatekeeper will block it from opening by default. Follow these steps to allow it:
+
+**Option A — Right-click to open (easiest, one-time only)**
+
+1. Open **Finder** and navigate to your **Applications** folder (or wherever you copied Tutu).
+2. **Right-click** (or Control-click) the Tutu icon and choose **Open** from the menu.
+3. A dialog will appear saying the app is from an unidentified developer. Click **Open** to proceed.
+4. macOS remembers this choice — you can double-click Tutu normally from now on.
+
+**Option B — System Settings (if Option A does not work)**
+
+1. Try to open Tutu by double-clicking it. macOS will show a blocking dialog — click **Done** (do not click "Move to Trash").
+2. Open **System Settings** → **Privacy & Security**.
+3. Scroll down to the **Security** section. You will see a message like *"Tutu was blocked because it is not from an identified developer."*
+4. Click **Open Anyway** next to that message.
+5. Confirm by clicking **Open** in the dialog that appears.
+
+**Option C — Terminal (if both options above fail)**
+
+Open **Terminal** and run:
+
+```bash
+xattr -cr /Applications/Tutu.app
+```
+
+Then double-click Tutu to open it normally. This command removes the macOS quarantine flag that Gatekeeper uses to block unsigned apps.
+
+> **Why does this happen?** Apple requires apps distributed outside the Mac App Store to be signed and notarized. This is a paid developer program ($99/year). Tutu is a free hobby project and has not gone through that process yet. The app itself is safe — you can inspect the full source code at the project repository.
 
 ## Need Support or have feedback or feature request?
 
