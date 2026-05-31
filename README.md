@@ -102,6 +102,25 @@ Email us at lihua.cao2007@gmail.com. This is only a hobby project so far, but we
 
 ## Release Notes
 
+### v1.0.16 — 2026-05-30
+
+**Customize Some Planning Configuration (new wizard step)**
+- Added a dedicated "Customize Some Planning Configuration" step in the Retirement Planning wizard, positioned between Retirement Withdrawal and Future Expenses.
+- Moved "Expected inflation rate (%)" here from the Retirement Timeline step.
+- Moved "Expected annual return (%)" here from the Retirement Withdrawal step and renamed it "Expected retirement annual return (%)" for clarity.
+- Added "Expected Stock Asset annual return (%)" (default 7.0%) — controls how the stock portfolio grows year over year in all projections.
+- Added "Expected Real Estate annual return (%)" (default 4.0%) — controls how real estate value appreciates year over year; previously this was hardcoded to half the inflation rate.
+
+**Projection calculation improvements**
+- Retirement accounts (401k/IRA), stock assets, and real estate now each use their own independently configurable annual return rate instead of sharing a single rate.
+
+**README and About page**
+- Added a Screenshots section to the README showing all Asset Management and Retirement Planning panels.
+- Added a detailed macOS Gatekeeper workaround guide ("I got an installation error on Mac") with three options: right-click open, System Settings, and Terminal xattr command.
+- Removed the completed "Support More Life Events" TODO item from both the README and the About page.
+
+---
+
 ### v1.0.15 — 2026-05-28
 
 **Annual Expense Projection chart (major enhancement)**
