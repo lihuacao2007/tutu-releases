@@ -102,6 +102,28 @@ Email us at lihua.cao2007@gmail.com. This is only a hobby project so far, but we
 
 ## Release Notes
 
+### v1.0.17 — 2026-05-31
+
+**Stock panel redesign**
+- Replaced the inline-edit input row with a dialog-based add/edit pattern consistent with Real Estate, Saving, and Retirement panels. Double-click any existing holding to edit it, or double-click the hint row / click "+ Add Stock" to add a new one.
+- Added "Unrealized Capital Gain" column to stock holdings — records the accumulated unrealized gain carried into a position for future capital gains tax calculations.
+- Added "↻ Refresh Prices" button next to the Holdings title. Fetches the latest previous-close price for all held symbols in parallel from Yahoo Finance, updates each holding's snapshot value, and automatically records the current month's snapshot via the existing DB trigger.
+- Fixed stock chart x-axis: months are now shown on the x-axis for all data ranges. Previously, datasets with fewer than 4 months and none falling on Jan/Apr/Jul/Oct showed no x-axis labels at all.
+
+**Monthly snapshot reminder service**
+- Tutu now registers an OS-level scheduled task on every launch (production only) that fires at 9 AM on the 1st, 5th, 10th, and 20th of each month.
+- On macOS: a launchd plist is written to ~/Library/LaunchAgents/com.tutu.reminder.plist and loaded automatically.
+- On Windows: four Task Scheduler entries are created via schtasks.
+- When triggered, a lightweight agent (com.tutu.ReminderAgent) opens the local database, checks whether the current month has any asset snapshot, and fires a native desktop notification if not. The reminder fires even when Tutu is not open.
+- Reminders stop automatically once a snapshot is recorded for that month.
+
+**Settings page (new)**
+- A dedicated Settings page is now accessible via the "⚙ Settings" button on the top-right of the About page.
+- Currently hosts one setting: "Monthly Asset Update Reminder" — a pill toggle to enable or disable the reminder service.
+- The Reminders toggle has been removed from the navigation panel and consolidated here.
+
+---
+
 ### v1.0.16 — 2026-05-30
 
 **Customize Some Planning Configuration (new wizard step)**
