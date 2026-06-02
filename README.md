@@ -102,6 +102,28 @@ Email us at lihua.cao2007@gmail.com. This is only a hobby project so far, but we
 
 ## Release Notes
 
+### v1.0.18 — 2026-06-01
+
+**Asset management charts — centred data and hover tooltips (all panels)**
+- When fewer than 12 months of data exist, the chart now centres the data in the middle of the 12-month axis with equal empty space on both sides, instead of left-aligning it.
+- Hover over any position on a chart to see a dotted vertical crosshair and a tooltip showing the month, per-series values (e.g. Stock, Real Estate, Saving, Retirement for the overview), and Total. Empty padding slots show "—".
+- Applies to: Overview (Asset Management), Stock, Real Estate, Saving, and Retirement panels.
+
+**Navigation**
+- Added a visual separator line above the Asset Management section in the left menu for clearer section grouping.
+
+**App icon improvements**
+- macOS Dock icon is now set programmatically via the Taskbar API so it displays correctly when running from the command line or a development environment.
+- Window title bar and taskbar icon now supplies four sizes (16, 32, 48, 256 px) for crisp rendering at all DPI settings.
+
+**Windows installer**
+- The Windows desktop shortcut now shows the Tutu icon instead of a generic Java icon.
+
+**Build fix — DMG size regression**
+- Fixed a bug where each successive macOS DMG grew by ~15 MB per release due to accumulated fat JARs in the jpackage staging directory. This release is back to ~62 MB (vs 120 MB for v1.0.17).
+
+---
+
 ### v1.0.17 — 2026-05-31
 
 **Stock panel redesign**
