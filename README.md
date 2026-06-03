@@ -102,6 +102,24 @@ Email us at tutu.retirement.planning@gmail.com. This is only a hobby project so 
 
 ## Release Notes
 
+### v1.0.19 — 2026-06-02
+
+**Capital gain tracking in retirement projection (new)**
+- The retirement estimation now maintains a capital gain bucket throughout the projection. It starts from the total unrealized capital gains entered across all stock holdings and grows each year by the stock portfolio's annual appreciation (`stock value × expected return rate`).
+- When the projection needs to sell stock to cover a savings deficit, it calculates the realized capital gain proportionally: `(stock sold ÷ total stock value) × capital gain bucket`. The bucket shrinks by that same amount.
+- Realized capital gains appear as a new **Capital Gain** row in the Projection Details income table and are automatically included in the gross income used to compute the Estimated Tax row. Years with no stock sale show "—".
+- To take advantage of this, enter the accumulated unrealized gain for each stock holding in the Stock panel's "Unrealized Capital Gain" column.
+
+**macOS Desktop and Dock shortcuts (new)**
+- On first launch after install or upgrade, Tutu automatically creates a Finder alias named "Tutu" on the macOS Desktop so users can open the app with a single click.
+- Tutu also pins itself to the macOS Dock on first launch if it is not already there.
+- Both actions are skipped on subsequent launches and in the development environment.
+
+**Support email updated**
+- Support and feedback address changed to tutu.retirement.planning@gmail.com across the app and README.
+
+---
+
 ### v1.0.18 — 2026-06-01
 
 **Asset management charts — centred data and hover tooltips (all panels)**
