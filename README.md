@@ -98,7 +98,7 @@ Then double-click Tutu to open it normally. This command removes the macOS quara
 
 ## Need Support or have feedback or feature request?
 
-Email us at lihua.cao2007@gmail.com. This is only a hobby project so far, but we will try to respond as fast as we can.
+Email us at tutu.retirement.planning@gmail.com. This is only a hobby project so far, but we will try to respond as fast as we can.
 
 ## Release Notes
 
