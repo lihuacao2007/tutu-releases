@@ -102,6 +102,29 @@ Email us at tutu.retirement.planning@gmail.com. This is only a hobby project so 
 
 ## Release Notes
 
+### v1.0.20 — 2026-06-03
+
+**Required Minimum Distribution (RMD) enforcement (new)**
+- Pre-tax retirement accounts (Traditional 401k, Traditional IRA, SEP IRA, etc.) now enforce the IRS Required Minimum Distribution rule starting at age 73, per the SECURE 2.0 Act.
+- The RMD is calculated using the IRS Uniform Lifetime Table: each year's minimum withdrawal = pre-tax account balance ÷ IRS distribution period for that age.
+- The RMD floor is enforced regardless of which withdrawal strategy is configured (Fixed, Percentage, or RMD) and regardless of the configured withdrawal start year — if you turn 73, the minimum is always taken.
+- After-tax (Roth) accounts are never subject to RMD, consistent with IRS rules.
+
+**Pre-tax vs. After-tax retirement withdrawal split (new)**
+- The "401k Withdrawal" row in the Retirement Estimation — Projection Details table is now split into two separate rows: **Pre-Tax Withdrawal** and **After-Tax Withdrawal**, making it clear which withdrawals are taxable and which are not.
+- The same split appears in the Income and Tax Projection table: **Pre-Tax Withdrawal** (taxable) and **After-Tax (Roth) Withdrawal** (non-taxable).
+- Years with no withdrawal of a given type show "—" to keep the table clean.
+
+**Roth withdrawal tax treatment (new)**
+- After-tax (Roth) withdrawals are now correctly excluded from federal taxable income in both the Retirement Estimation and Income and Tax projection panels.
+- This affects the Estimated Tax row and the effective tax rate — years when the projection draws from Roth accounts will show lower tax liability.
+
+**Withdrawal order — pre-tax first, Roth when depleted**
+- The projection now draws from pre-tax retirement accounts first. When a pre-tax balance reaches zero (for Fixed withdrawal strategies), the remaining configured withdrawal amount automatically falls to the after-tax (Roth) account.
+- Emergency drawdown order (when annual savings go negative) is: stock portfolio → Roth accounts → pre-tax Traditional accounts, preserving tax-free Roth assets for as long as possible.
+
+---
+
 ### v1.0.19 — 2026-06-02
 
 **Capital gain tracking in retirement projection (new)**
