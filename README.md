@@ -102,6 +102,31 @@ Email us at tutu.retirement.planning@gmail.com. This is only a hobby project so 
 
 ## Release Notes
 
+### v1.0.21 — 2026-06-05
+
+**macOS Menu Bar icon (new)**
+- Tutu now installs a persistent icon in the macOS top-right menu bar. The icon stays there for the lifetime of the session and provides a popup menu with two actions: **Open Tutu** (brings the window to front) and **Quit Tutu** (fully exits the app and removes both icons).
+- Closing the main window (clicking ×) now hides the window instead of quitting — the app keeps running in the menu bar so you can reopen it instantly without re-launching.
+- Clicking the Dock icon when no window is visible reopens the window.
+- Dock → Quit hides the window and removes the Dock indicator but keeps the menu bar icon alive. The only way to fully exit is via "Quit Tutu" in the menu bar popup.
+- On non-macOS platforms (Windows, Linux) the same icon appears in the system tray with identical behaviour.
+
+**Fix: duplicate Dock icon on every launch from Applications**
+- Fixed a bug where Tutu added a new Dock entry on every launch because the existing-entry check compared against the bare path `/Applications/Tutu.app` while macOS stores Dock entries as `file:///Applications/Tutu.app/` (with `file://` scheme, trailing slash, and `_CFURLStringType 15`). The format mismatch caused the check to always fail.
+- The fix checks all four plausible URL variants and adds new entries using the correct `file://` format.
+
+**Fix: expense overrides now propagate with inflation**
+- Previously, when you customized an expense value for a year, all subsequent years silently fell back to the original config base rather than compounding from your override. Now, the most recent override is used as the new base, and all subsequent years without their own explicit override compound from it using the configured inflation rate.
+- This fix applies to both the Retirement Estimation projection and the Expenses panel display.
+
+**Fix: bulk expense dialog now applies inflation growth across the range**
+- When double-clicking a cell in the Future Expenses table and using "Bulk update through year", the entered amount is now treated as the value for the selected year and each subsequent year in the range receives that amount compounded by the configured inflation rate. Previously the same flat amount was stored for every year in the range.
+
+**About page — updated TODOs**
+- Reorganized and updated the planned features list under three headings: General, Retirement Planning, and Retirement Analysis.
+
+---
+
 ### v1.0.20 — 2026-06-03
 
 **Required Minimum Distribution (RMD) enforcement (new)**
