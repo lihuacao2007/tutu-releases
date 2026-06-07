@@ -102,6 +102,33 @@ Email us at tutu.retirement.planning@gmail.com. This is only a hobby project so 
 
 ## Release Notes
 
+### v1.0.23 — 2026-06-06
+
+**Medicare Premium as a separate expense line (new)**
+- Medicare Part B premium now appears as its own **Medicare Premium** row in the Retirement Estimation — Projection Details table under Expenses, below "Housing Cost (Tax, HOA)".
+- Premium is inflation-adjusted year over year using the configured inflation rate.
+- IRMAA surcharges are applied automatically: the projected MAGI for each year is compared against the 2025 IRS income brackets (inflation-scaled), and the correct premium tier is used — so high earners pay the appropriate surcharge rather than the base rate.
+- Both the primary user's and spouse's Medicare eligibility are tracked independently starting at age 65.
+
+**Order of withdrawal configuration (new)**
+- A new "Order of withdrawal" setting has been added to the Retirement Withdrawal step of the wizard, with two choices: **Pre-tax first (default)** and **After-tax first**.
+- Pre-tax first: draws from Traditional 401k/IRA accounts first; when depleted, the remainder comes from Roth. RMDs are always enforced regardless of this setting.
+- After-tax first: draws RMD from pre-tax accounts (mandatory), then covers the remaining desired withdrawal from Roth, falling back to pre-tax only if Roth is insufficient.
+- The choice flows through both the Retirement Estimation projection and the Income and Tax panel.
+
+**IRMAA surcharge in Finance Literacy (new)**
+- Added "IRMAA (Medicare Income Surcharge)" term to the Finance Literacy tab, covering the look-back period, 2025 Part B brackets, IRMAA cliff effect, and the Part D surcharge.
+
+**Housing Cost row renamed**
+- "Housing Cost" row in the Projection Details expense table renamed to **"Housing Cost (Tax, HOA)"** to clarify that it aggregates property taxes and HOA fees.
+
+**Retirement Planning wizard UI improvements**
+- Field labels enlarged from 12 pt to 14 pt and hint/note text from 11 pt to 13 pt for better readability.
+- Text fields and dropdowns are now constrained to a maximum width of 400 px — they no longer stretch across the full card width.
+- A visual **"Spouse" section divider** is inserted between user fields and spouse-conditional fields in each wizard step, making the two sections clearly distinct. The divider hides automatically when no spouse is configured.
+
+---
+
 ### v1.0.22 — 2026-06-05
 
 **Account page (new)**
