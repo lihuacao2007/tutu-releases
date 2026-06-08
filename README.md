@@ -102,6 +102,30 @@ Email us at tutu.retirement.planning@gmail.com. This is only a hobby project so 
 
 ## Release Notes
 
+### v1.0.24 — 2026-06-07
+
+**Retirement Questions — "Do I have enough money to retire from today?" (new)**
+- Clicking **Run Analysis** now runs a three-layer simulation and reveals each result progressively.
+- **Analysis 1 — Income Gap & Rule of 25**: Checks whether your current liquid assets (savings + stocks + retirement accounts) meet the Rule of 25 target (income gap × 25). Only Social Security income already flowing today is counted; future SS is excluded with a "bridge period" note showing how many years until it begins.
+- **Analysis 2 — Deterministic Year-by-Year Projection**: Runs the full projection engine with retire year set to today, modeling account growth, RMD rules, IRMAA premiums, life events, and expense inflation. Reports whether the portfolio survives to your longevity age, and if not, the year and age it runs out.
+- **Analysis 3 — Monte Carlo Simulation (2,000 runs)**: Runs 2,000 simulations with Gaussian-perturbed annual returns (blended retirement/stock mean, 10% std dev) and reports the survival probability as a percentage with a readiness rating (Strong / Moderate / Risky).
+- Each layer shows a **Details** line (numbers and conclusion) and a **Methodology** line (approach and assumptions).
+- Simulation results persist across panel refreshes. A "Simulation run on [Date]" note appears at the bottom.
+
+**Retirement Questions — "When can I retire?" (new)**
+- Clicking **Run Analysis** runs a three-layer retirement date search, revealing each result progressively.
+- **Analysis 1 — SWR Target Check**: Scans your projected wealth year by year (using your configured retire year) to find the earliest year where projected liquid assets × 4% covers the inflation-adjusted income gap — accounting for which year SS becomes available.
+- **Analysis 2 — Deterministic Binary Search**: Binary-searches retire years from today to your longevity age (~6 iterations). Each candidate runs the full projection engine; the earliest year where the portfolio never goes negative is returned.
+- **Analysis 3 — Monte Carlo Confidence Search (1,000 runs/year)**: Binary-searches retire years using a two-phase Monte Carlo model — deterministic growth + contributions during working years, then Gaussian-perturbed returns during retirement. Returns the earliest retire year with ≥85% survival probability.
+- Same persistent results and date note as Q1.
+
+**Retirement Questions UI polish**
+- Question titles now show a **Q1** / **Q2** prefix for quick reference.
+- The **Run Analysis** button sits on the same line as the question title.
+- Each analysis layer formats its answer in three parts: status badge + analysis title, **Details**, and **Methodology**.
+
+---
+
 ### v1.0.23 — 2026-06-06
 
 **Medicare Premium as a separate expense line (new)**
@@ -399,4 +423,3 @@ Email us at tutu.retirement.planning@gmail.com. This is only a hobby project so 
 ### 1. Retirement Analysis
 - Add a what-if scenario feature to explore alternatives without changing existing planning
 - Add a manual scan that surfaces financial tips and tax optimizations based on the current asset portfolio and income — e.g. best time for a Roth conversion, best time to realize capital gains from stocks, asset allocation adjustments based on age and progress toward retirement
-- Add basic questions with personalized answers based on the user's retirement data
