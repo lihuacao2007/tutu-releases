@@ -102,6 +102,23 @@ Email us at tutu.retirement.planning@gmail.com. This is only a hobby project so 
 
 ## Release Notes
 
+### v1.0.25 — 2026-06-10
+
+**Retirement Questions — "What is my best Social Security withdrawal strategy?" (new Q3)**
+- Clicking **Run Analysis** runs a three-layer Social Security strategy analysis and reveals each result progressively.
+- **Analysis 1 — Lifetime Benefit Comparison**: Computes your monthly benefit at age 62, your Full Retirement Age (FRA), and age 70 using IRS reduction/credit rules (5/9% + 5/12% per month early; 8%/yr delayed past FRA). Shows total lifetime SS income to your longevity age for each strategy, calculates breakeven ages between strategies, and recommends the best strategy based on your configured longevity age. Includes a survivor-benefit note if you are the higher earner with a spouse.
+- **Analysis 2 — Deterministic Portfolio Impact**: Runs three full projection-engine scenarios — one per SS strategy — holding everything else constant. Compares ending portfolio balances at your longevity age and identifies the strategy that leaves the most wealth.
+- **Analysis 3 — Monte Carlo Survival by Strategy (1,500 runs/strategy)**: Runs Monte Carlo simulations for each SS strategy with Gaussian-perturbed annual returns, and reports survival probability for each. Identifies which claiming age gives your portfolio the best odds of surviving to your longevity age.
+- Results persist across app restarts, same as Q1 and Q2.
+
+**Retirement Questions UI**
+- Added a contact note below the section subtitle: "Please reach out to tutu.retirement.planning@gmail.com if you have other questions you wish to have personalized answers to."
+
+**Cross-restart persistence for all Retirement Questions analysis results**
+- Q1, Q2, and Q3 analysis results now survive app quit and reopen. The last result is shown automatically on next launch; clicking **Run Analysis** re-runs and overwrites it.
+
+---
+
 ### v1.0.24 — 2026-06-07
 
 **Retirement Questions — "Do I have enough money to retire from today?" (new)**
