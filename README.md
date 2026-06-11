@@ -102,6 +102,26 @@ Email us at tutu.retirement.planning@gmail.com. This is only a hobby project so 
 
 ## Release Notes
 
+### v1.0.26 — 2026-06-10
+
+**Retirement Tips — full implementation (new)**
+- The Retirement Tips panel now runs a real data-driven scan across 8 personalized tip categories:
+  - **Roth Conversion Window** — identifies low-income years between retirement and SS/RMD start where pre-tax funds can be converted at the 12% bracket rate.
+  - **Capital Gain Harvesting** — flags projected years where ordinary taxable income falls below the 0% long-term capital gains threshold, enabling tax-free gain realization.
+  - **Social Security Timing** — compares your configured SS start age against the longevity-adjusted breakeven for delaying to 70, and flags if delaying would yield more lifetime income.
+  - **Sequence-of-Returns Risk Buffer** — checks whether projected cash savings at your retire year cover a 24-month expense buffer to protect against early-retirement market downturns.
+  - **Pre-RMD Roth Conversion** — detects a multi-year gap before age-73 RMDs begin and flags large pre-tax balances that could be reduced through Roth conversions.
+  - **Medicare IRMAA Cliff** — scans retirement-year projected MAGI against 2025 Part B surcharge thresholds and warns when income is within $10K of a cliff.
+  - **Asset Allocation Check** — compares your current stock percentage against the 110-minus-age guideline and flags over- or under-allocation.
+  - **Emergency Fund** — checks whether liquid savings cover 3 / 6 / 12 months of projected monthly expenses.
+- Each tip is rated **Action Needed**, **Warning**, **Info**, or **No Issues**, and displayed with a headline finding and detailed explanation.
+- Tips are sorted by severity (Action → Warning → Info). "No issues" and dismissed tips appear in collapsible sections.
+- A **Scan Now** button triggers an immediate re-scan. The scan also runs automatically in the background on app startup if the last scan is more than 30 days old.
+- One scan result set is kept per calendar month; re-scanning in the same month overwrites the previous result. Results from prior months are preserved in the database.
+- Each tip card has a **Dismiss** button; dismissed tips move to a collapsed section and can be reviewed without cluttering the main view.
+
+---
+
 ### v1.0.25 — 2026-06-10
 
 **Retirement Questions — "What is my best Social Security withdrawal strategy?" (new Q3)**
@@ -439,4 +459,3 @@ Email us at tutu.retirement.planning@gmail.com. This is only a hobby project so 
 
 ### 1. Retirement Analysis
 - Add a what-if scenario feature to explore alternatives without changing existing planning
-- Add a manual scan that surfaces financial tips and tax optimizations based on the current asset portfolio and income — e.g. best time for a Roth conversion, best time to realize capital gains from stocks, asset allocation adjustments based on age and progress toward retirement
