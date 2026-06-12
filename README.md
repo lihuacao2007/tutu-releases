@@ -102,6 +102,23 @@ Email us at tutu.retirement.planning@gmail.com. This is only a hobby project so 
 
 ## Release Notes
 
+### v1.0.27 — 2026-06-11
+
+**Retirement Tips — two new Expense tips (new)**
+- **Healthcare Expense Check** — compares your configured monthly healthcare expense against 2025 national retiree benchmarks (~$500/mo per person for Medicare-age retirees, ~$800/mo for pre-Medicare), scaled for single vs. couple coverage. Flags under-budgeting as Action Needed or Warning, and flags extreme over-budgeting as an Info note.
+- **Spending Smile Pattern** — checks whether your retirement expense plan reflects the Blanchett (2014) "spending smile": higher spending in the go-go years (retirement to +10 yrs), tapering in slow-go (+10 to +20 yrs), and lower spending in no-go years (age 80+). Suggests adding ~15% in go-go years and ~10% in no-go years via life events if the pattern is absent.
+
+**Retirement Questions — answers shown immediately on panel open (fix)**
+- Previously, navigating to Retirement Questions right after app startup showed a blank panel for ~½ second while the database loaded in the background. Persisted answers are now rendered synchronously from disk as soon as the panel opens, so the panel is never blank.
+
+**Windows installer — release tag derived from pom.xml (fix)**
+- The GitHub Actions "Build Windows Installer" workflow previously uploaded the .exe to a hardcoded release tag (`v1.0.15`). It now reads the version from `pom.xml` at build time and uses the correct tag automatically.
+
+**What-If Scenarios — hidden from navigation (chore)**
+- The What-If Scenarios menu item is temporarily hidden until the feature is implemented.
+
+---
+
 ### v1.0.26 — 2026-06-10
 
 **Retirement Tips — full implementation (new)**
