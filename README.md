@@ -102,6 +102,31 @@ Email us at tutu.retirement.planning@gmail.com. This is only a hobby project so 
 
 ## Release Notes
 
+### v1.1.0 — 2026-06-14
+
+**What-If Scenarios — Scenario 2: Future Tax Rate (new)**
+- A second what-if scenario is now available: **"What if federal income tax rates increase?"**
+- Enter a tax rate increase percentage (e.g. 50 means every bracket rate is multiplied by 1.5×, so a 22% bracket becomes 33%) and the year the increase takes effect.
+- Click **Go Analyze** to run a full retirement projection with the higher tax rates while keeping all other plan settings unchanged (rates, retire year, Social Security, life events, expenses).
+- Results are displayed as the same simplified Retirement Financial Estimation chart as Scenario 1: stacked income/expense bars, Net Savings line, and dual Total Assets lines (what-if vs. original) for direct comparison.
+
+**What-If Scenarios — each scenario has its own embedded chart (improvement)**
+- Each scenario card now contains its own chart that appears inside the card when **Go Analyze** is clicked, instead of all scenarios sharing a single chart at the bottom of the page.
+- Scenario 1's chart appears within Scenario 1's card; Scenario 2's chart appears within Scenario 2's card. Both charts can be visible at the same time for side-by-side comparison.
+
+**Asset Management Overview — Asset Summary and Score Card (new)**
+- A new **Asset Summary and Score Card** section appears below the Total Portfolio and Asset Value chart on the Overview page.
+- Six rows are scored automatically from your current asset data:
+  - **Total Asset Value** — scored GREEN / YELLOW / RED against the Rule of 25 (25× projected annual retirement income gap), or GREEN with a note when Social Security covers projected expenses.
+  - **Asset Allocation** — scored against the 110-minus-age stock allocation guideline, flagging significant over- or under-allocation.
+  - **Retirement Pre-tax vs. After-tax** — scored on Roth ratio: GREEN ≥ 30% after-tax, YELLOW 10–30%, RED < 10%.
+  - **Total Savings** — scored as months of projected monthly expenses covered: GREEN ≥ 12 mo, YELLOW 6–12 mo, RED < 6 mo.
+  - **Unrealized Capital Gain** — informational only; shows total unrealized gain with a note to realize gains during low-income years to minimize tax.
+  - **Real Estate Appreciation** — informational only; shows total appreciation (current value − purchase price) with the same tax planning note.
+- Each row uses a three-column layout: label | value + color badge | scoring logic and legend.
+
+---
+
 ### v1.0.28 — 2026-06-13
 
 **What-If Scenarios — Scenario 1: Rate Assumptions (new)**
