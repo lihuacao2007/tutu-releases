@@ -77,13 +77,9 @@ This is a deliberate choice to protect your privacy. Tutu will NEVER upload any 
 
 ### Reference
 
-| Finance Literacy | Account |
-|------------------|---------|
-| ![Finance Literacy](screenshots/finance-literacy.png) | ![Account](screenshots/account.png) |
-
-| About | |
-|-------|--|
-| ![About](screenshots/about.png) | |
+| Finance Literacy | |
+|------------------|--|
+| ![Finance Literacy](screenshots/finance-literacy.png) | |
 
 ## I got an installation error on Mac, what should I do?
 
