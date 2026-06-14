@@ -102,6 +102,16 @@ Email us at tutu.retirement.planning@gmail.com. This is only a hobby project so 
 
 ## Release Notes
 
+### v1.0.28 — 2026-06-13
+
+**What-If Scenarios — Scenario 1: Rate Assumptions (new)**
+- Navigating to **What-If Scenarios** now shows a fully functional first scenario instead of a placeholder.
+- Enter alternative rate assumptions — expected inflation rate, retirement account annual return, stock asset annual return, and real estate annual return — and click **Go Analyze** to run a projection with those rates while keeping everything else in your plan unchanged (retire year, Social Security, life events, expenses).
+- Results are shown as a simplified **Retirement Financial Estimation chart**: stacked income/expense bars and dual-axis lines, with hover tooltips showing Income Subtotal, Expense Subtotal, Net Saving, and Total Assets for any year. The chart does not include life event markers, a right-click event editor, or the projection details table.
+- The chart renders **two Total Assets lines** on the same right axis for direct comparison: a solid orange line for the what-if projection and a dashed blue line for your original plan, so the impact of the rate change is immediately visible.
+
+---
+
 ### v1.0.27 — 2026-06-11
 
 **Retirement Tips — two new Expense tips (new)**
