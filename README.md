@@ -65,6 +65,26 @@ This is a deliberate choice to protect your privacy. Tutu will NEVER upload any 
 |----------|--|
 | ![Expenses](screenshots/expenses.png) | |
 
+### Retirement Analysis
+
+| Retirement Questions | What-If Scenarios |
+|----------------------|-------------------|
+| ![Retirement Questions](screenshots/retirement-questions.png) | ![What-If Scenarios](screenshots/what-if.png) |
+
+| Retirement Tips | |
+|-----------------|--|
+| ![Retirement Tips](screenshots/retirement-tips.png) | |
+
+### Reference
+
+| Finance Literacy | Account |
+|------------------|---------|
+| ![Finance Literacy](screenshots/finance-literacy.png) | ![Account](screenshots/account.png) |
+
+| About | |
+|-------|--|
+| ![About](screenshots/about.png) | |
+
 ## I got an installation error on Mac, what should I do?
 
 Tutu is currently not signed by an Apple developer certificate, so macOS Gatekeeper will block it from opening by default. Follow these steps to allow it:
