@@ -14,26 +14,27 @@ Tutu is useful for everyone on the financial journey — from the new graduate w
 
 **Asset Management**
 - **Overview** — A dashboard showing your total net worth with historical charts (1Y / 5Y / 10Y) across all asset types and cashflow trends. Includes an **Asset Summary Score Card** that automatically scores your Total Asset Value (Rule of 25), Asset Allocation (110-minus-age guideline), Retirement Pre-tax vs. After-tax balance (Roth ratio), Total Savings coverage (months of expenses), Unrealized Capital Gain, and Real Estate Appreciation.
-- **Stock** — Track your stock portfolio with a live **↻ Refresh Prices** button that fetches the latest prices from Yahoo Finance, an Unrealized Capital Gain column for each holding, and historical multi-line performance charts.
-- **Real Estate** — Manage your properties with full mortgage tracking (monthly payment auto-calculated from loan details), HOA fees, annual property tax rate, and rental income — all tracked independently so your equity, cashflow, and net costs are always clear.
+- **Stock** — Track your stock portfolio with a live **↻ Refresh Prices** button that fetches the latest prices from Yahoo Finance. Unrealized Capital Gain is tracked automatically — it adjusts when prices are refreshed and scales proportionally when you sell shares.
+- **Real Estate** — Manage your properties with full mortgage tracking (monthly payment auto-calculated from loan details), HOA fees, annual property tax rate, and rental income — all tracked independently so your equity, cashflow, and net costs are always clear. Only the Property Zip Code is stored (not the full address) to protect your privacy.
 - **Saving** — Monitor your savings and cash accounts with historical balance charts over time.
 - **Retirement** — Track pre-tax (Traditional 401k / IRA) and after-tax (Roth) retirement accounts separately, with historical growth charts.
 
 **Retirement Planning**
 - **Retirement Planning** — A step-by-step configuration wizard covering Retirement Timeline, Withdrawal Strategy (fixed amount, percentage, or RMD), Social Security, Spouse, independent return rates per asset class (retirement accounts, stocks, real estate), Order of Withdrawal (pre-tax first or after-tax first), and planned Life Events.
-- **Retirement Estimation** — A detailed year-by-year projection chart and table showing how your portfolio grows and is drawn down through retirement. Enforces RMD rules (SECURE 2.0, starting age 73), applies Medicare Part B premiums with IRMAA surcharges, tracks capital gains from stock sales, and splits withdrawals into Pre-Tax and After-Tax rows.
+- **Retirement Estimation** — A detailed year-by-year projection chart and table showing how your portfolio grows and is drawn down through retirement. Enforces RMD rules (SECURE 2.0, starting age 73), applies Medicare Part B premiums with IRMAA surcharges, tracks capital gains from stock sales, and splits withdrawals into Pre-Tax and After-Tax rows. The chart marks your and your spouse's retirement ages with labeled dotted lines for easy reference.
 - **Life Events** — Plan major one-time financial events (buying or selling a home, paying off a mortgage, college costs, new baby, job loss, inheritance, wedding, medical expenses, and more) and see their impact on your retirement trajectory.
-- **Income and Tax** — Project year-by-year taxable income from all sources (salary, rental, Social Security, pre-tax withdrawals, capital gains, and other) alongside a federal income tax estimate with bracket-by-bracket detail, standard deduction, net taxable income, and effective tax rate.
-- **Expenses** — Plan year-by-year living expenses with inflation-adjusted projections across six categories (Housing, Healthcare, Food, Transport, Entertainment, Other). Override any individual cell, bulk-update a range, and explore spending patterns through an interactive multi-line chart with drag-to-edit support.
+- **Income and Tax** — Project year-by-year taxable income from all sources (salary, rental, Social Security, pre-tax withdrawals, capital gains, and other) alongside a federal income tax estimate with bracket-by-bracket detail, standard deduction, net taxable income, and effective tax rate. The chart marks your and your spouse's retirement ages with labeled dotted lines.
+- **Expenses** — Plan year-by-year living expenses with inflation-adjusted projections across six categories (Housing, Healthcare, Food, Transport, Entertainment, Other). Override any individual cell, bulk-update a range, and explore spending patterns through an interactive multi-line chart with drag-to-edit support. The chart marks your and your spouse's retirement ages with labeled dotted lines.
 
 **Retirement Analysis**
 - **Retirement Questions** — Three in-depth retirement analyses, each running three progressive layers of simulation and persisting results across app restarts:
   - *Q1 — Do I have enough money to retire from today?* — Rule of 25 income gap check → full deterministic year-by-year projection → 2,000-run Monte Carlo survival probability.
   - *Q2 — When can I retire?* — Safe withdrawal rate year search → deterministic binary search → Monte Carlo confidence search (1,000 runs/year) targeting ≥85% survival probability.
   - *Q3 — What is my best Social Security claiming strategy?* — Lifetime benefit comparison at ages 62 / FRA / 70 → deterministic portfolio impact across all three strategies → 1,500-run Monte Carlo survival probability per strategy.
-- **What-If Scenarios** — Explore alternative financial decisions without modifying your existing plan. Each scenario has its own embedded chart showing what-if vs. original Total Assets side by side:
+- **What-If Scenarios** — Explore alternative financial decisions without modifying your existing plan. Each scenario has its own embedded chart showing what-if vs. original Total Assets side by side. The page supports horizontal scrolling on narrow screens:
   - *Scenario 1 — Rate Assumptions*: adjust inflation rate, retirement account return, stock return, and real estate return.
   - *Scenario 2 — Future Tax Rate*: model a federal income tax rate increase (e.g. 50% increase multiplies every bracket rate by 1.5×) taking effect in a specified future year.
+  - *Scenario 3 — Retire at Different Age*: enter an alternative retirement age and see how your portfolio trajectory changes, with dotted lines marking both the original and what-if retirement ages on the chart.
 - **Retirement Tips** — Automated scan across 8 financial health categories: Roth Conversion Window, Capital Gain Harvesting, Social Security Timing, Sequence-of-Returns Risk Buffer, Pre-RMD Roth Conversion, Medicare IRMAA Cliff, Asset Allocation, and Emergency Fund. Each tip is rated Action Needed / Warning / Info with a detailed explanation. Scans run monthly in the background; tips can be dismissed and reviewed later.
 
 **Finance Literacy** — 19 financial and retirement concepts explained in plain language: 401(k) and 403(b), Backdoor Roth Conversion, Capital Gain, Compound Interest, Inflation, IRMAA (Medicare Income Surcharge), Medicare, Mortgage, Net Worth, Property Tax, Required Minimum Distribution (RMD), Retirement Plans and Contributions, Retirement Spending Smile, Roth IRA and Roth IRA Conversion, Sequence of Returns Risk, Social Security, Tax Brackets, Traditional IRA, and Withdrawal Rate (Safe Withdrawal Rate).
@@ -124,6 +125,44 @@ Then double-click Tutu to open it normally. This command removes the macOS quara
 Email us at tutu.retirement.planning@gmail.com. This is only a hobby project so far, but we will try to respond as fast as we can.
 
 ## Release Notes
+
+### v1.1.1 — 2026-06-15
+
+**What-If Scenarios — Scenario 3: Retire at Different Age (new)**
+- A third what-if scenario is now available: **"What if I retire at ___ years old?"**
+- Enter an alternative retirement age (defaults to your currently configured age) and click **Go Analyze** to run a full retirement projection with the shifted retire year while keeping all other plan settings unchanged.
+- Results are displayed in the same embedded simplified chart as Scenarios 1 and 2, with dual Total Assets lines (what-if vs. original) for direct comparison.
+- Two vertical dotted lines are drawn on the chart — one for your original retirement age and one for the what-if retirement age — both labeled with "Age N" so the shift is immediately visible.
+
+**Retirement Charts — retirement age markers (new)**
+- The **Retirement Financial Estimation** chart, **Income and Tax** chart, and **Annual Expense Projection** chart all now display vertical dotted lines marking your retirement age and your spouse's retirement age (if configured).
+- Each line is labeled with "Age N" directly on the chart.
+- Two new legend entries appear on each chart: "My retirement age" (teal) and "Spouse retirement age" (pink).
+
+**What-If Scenarios — horizontal scrolling on narrow screens (improvement)**
+- The What-If Scenarios page now supports horizontal scrolling when the window is narrowed below 700 px, so scenario card content is never clipped or squished.
+
+**Real Estate — Property Zip Code replaces Address (privacy improvement)**
+- The "Address" field in the Add/Edit Property dialog is renamed to **"Property Zip Code"** to avoid storing a full street address on disk.
+- Existing data is migrated automatically on the next app launch.
+- The help tooltips for Purchase Price and Current Value still say "search your property address on Redfin or Zillow" because that is how you look up the values — only what is stored locally has changed.
+
+**Real Estate — Help Tooltips in the Property Dialog (new)**
+- Four **"?" help buttons** have been added to the Add/Edit Property dialog:
+  - **Purchase Price** — explains how to find your original purchase price on Redfin or Zillow by searching the property address.
+  - **Current Value** — explains how to find the current estimated value on Redfin or Zillow.
+  - **Annual Property Tax Rate (%)** — suggests searching "[your county] property tax rate" on Google.
+  - **Mortgage Info** separator — explains how to find mortgage details by logging into your loan servicer's website or mobile app.
+- Hover over "?" to see the tooltip, or click it for a dialog popup.
+
+**Stock — Unrealized Capital Gain auto-tracking (improvement)**
+- The Unrealized Capital Gain field is now tracked automatically instead of being a purely manual entry.
+- **Price refresh (↻ Refresh Prices)**: the gain adjusts by `shares × (new_price − old_price)`, preserving your cost basis across every price update.
+- **Selling shares (reducing share count)**: the gain scales down proportionally — `new_gain = old_gain × (new_shares / old_shares)`.
+- **Buying more shares (increasing share count)**: the existing gain stays unchanged; new shares are assumed purchased at the current market price with zero embedded gain.
+- **Manual override**: typing directly in the Unrealized Capital Gain field always takes precedence — auto-adjustment is skipped when you edit the field.
+
+---
 
 ### v1.1.0 — 2026-06-14
 
