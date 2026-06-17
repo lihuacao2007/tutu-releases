@@ -12,6 +12,10 @@ Tutu is a financial planning and retirement planning software that helps you tra
 
 Tutu is useful for everyone on the financial journey — from the new graduate who just started their first job and wants to build good habits, to the person who is approaching retirement and would like to access their financial readiness or already retired and wants to stay on top of their financial health.
 
+## Do I need to enter any PII (Personal Identity Information) to use Tutu?
+
+Zero — no name, no address, no phone, no email, no Social Security number, no account information. The only information that is remotely close to PII is birth year and birth month, which are used solely for retirement age and RMD calculations in the projection.
+
 ## What features does it have?
 
 **Asset Management**
