@@ -6,6 +6,8 @@ Tutu is a financial planning and retirement planning software that helps you tra
 
 **Download:** https://github.com/lihuacao2007/tutu-releases/releases
 
+**Source Code:** https://github.com/lihuacao2007/tutu
+
 ## Who is it for?
 
 Tutu is useful for everyone on the financial journey — from the new graduate who just started their first job and wants to build good habits, to the person who is approaching retirement and would like to access their financial readiness or already retired and wants to stay on top of their financial health.
@@ -125,6 +127,29 @@ Then double-click Tutu to open it normally. This command removes the macOS quara
 Email us at tutu.retirement.planning@gmail.com. This is only a hobby project so far, but we will try to respond as fast as we can.
 
 ## Release Notes
+
+### v1.1.2 — 2026-06-16
+
+**What-If Scenarios — Scenario 4: Social Security Benefit Cut (new)**
+- A fourth what-if scenario is now available: **"What if Social Security benefits are cut by ___ %?"**
+- Enter a cut percentage between 0 and 100 (defaults to 25, reflecting the projected 2033 trust fund shortfall). Both your and your spouse's monthly SS benefit are scaled by `(1 − cut%)` in the what-if projection while all other plan settings remain unchanged.
+- Results are displayed in the same embedded simplified chart as other scenarios, with dual Total Assets lines (what-if vs. original) for direct comparison.
+
+**Retirement Withdrawal wizard — Saving Asset Balance (new)**
+- A new **"Saving Asset Balance"** dropdown has been added to the Retirement Withdrawal step of the wizard, with options: No buffer (default), 6 / 12 / 18 / 24 Months Living Expense.
+- A visual separator line is now drawn above the "Order of Withdrawal" field to clearly separate per-person withdrawal strategy settings from shared settings.
+- When a buffer is configured, the retirement projection engine maintains the target saving balance at the end of every year — in pre-retirement years by drawing from the stock portfolio; in retirement years by also drawing from retirement accounts (following the configured withdrawal order). If no other assets are available to fill the shortfall, the balance is left at whatever is available.
+
+**Asset Summary Score Card — Saving score criteria updated**
+- The **Total Savings** score thresholds have been updated to reflect a more meaningful liquidity buffer:
+  - **Green**: ≥ 2 years of living expenses (previously ≥ 5 years)
+  - **Yellow**: ≥ 1 year but < 2 years (previously ≥ 2 years)
+  - **Red**: < 1 year of living expenses (previously < 2 years)
+
+**README — Source Code link added**
+- A **Source Code** link to the GitHub repository has been added below the Download link.
+
+---
 
 ### v1.1.1 — 2026-06-15
 
