@@ -132,6 +132,23 @@ Email us at tutu.retirement.planning@gmail.com. This is only a hobby project so 
 
 ## Release Notes
 
+### v1.1.3 — 2026-06-17
+
+**Retirement Projection — Savings-first withdrawal (new)**
+- The projection engine now draws from the **Saving Asset** before touching retirement accounts each year.
+- When the saving balance exceeds the configured reserve floor (Saving Asset Balance setting in the Retirement Withdrawal wizard), the surplus is used to cover living expenses first — reducing taxable retirement withdrawals and lowering the annual tax bill.
+- RMD (Required Minimum Distribution) floors are always honored regardless of savings availability.
+- If savings surplus is insufficient, the remaining gap is covered by pre-tax or after-tax retirement accounts per the configured withdrawal order.
+
+**Retirement Projection — Excess savings swept to Stock Asset (new)**
+- At the end of each projection year, any saving balance above the configured reserve floor is automatically moved into the Stock Asset portfolio for better long-term returns.
+- This ensures the saving account is never left with idle cash beyond what is needed for liquidity, while the reserve floor is always maintained.
+
+**README — PII question added**
+- Added a "Do I need to enter any PII?" section explaining that Tutu requires zero personal identity information — no name, address, phone, email, Social Security number, or account details. Only birth year and birth month are used for retirement age and RMD calculations.
+
+---
+
 ### v1.1.2 — 2026-06-16
 
 **What-If Scenarios — Scenario 4: Social Security Benefit Cut (new)**
