@@ -131,6 +131,34 @@ Email us at tutu.retirement.planning@gmail.com. This is only a hobby project so 
 
 ## Release Notes
 
+### v1.1.4 — 2026-07-05
+
+**Bug fix — Rental income going negative after selling a rental property (fix)**
+- After adding a "Sell a House" life event, the rental income in the retirement projection could incorrectly show as a negative value in some cases.
+- Root cause: the cashflow stored in the event at creation time becomes stale if the property's monthly cashflow is later edited. Subtracting the stale (larger) value from the current total cashflow pushed the result below zero.
+- Fixed by looking up the property's current cashflow by property ID from live data at projection time, rather than relying on the stored snapshot. A safety clamp (≥ 0) is also applied as a guard.
+
+**What-If Scenarios — "Apply to My Retirement Planning" button (new)**
+- Each what-if scenario now has a green **"Apply to My Retirement Planning"** button in the top-right corner of its chart, visible after running Go Analyze.
+- Clicking the button shows a confirmation dialog with the values to be applied, then saves them to your Retirement Planning configuration.
+- After applying, the scenario chart automatically re-runs with the updated configuration as the new baseline, and the Retirement Planning projection refreshes in the background.
+  - *Scenario 1* applies: Inflation rate, Retirement return, Stock return, Real estate return.
+  - *Scenario 2* applies: Tax rate multiplier and effective start year.
+  - *Scenario 3* applies: Your retirement year (and spouse's if configured).
+  - *Scenario 4* applies: Reduced SS monthly benefit(s) scaled by the cut percentage.
+
+**What-If Scenario 3 — Spouse retirement age (new)**
+- When a spouse is configured, Scenario 3 ("Retire at Different Age") now shows a second input field — **"Spouse retire at age"** — pre-filled from the currently configured spouse retirement age.
+- Both ages are used in the Go Analyze projection and in the Apply action.
+
+**macOS — separate ARM64 and Intel installers (new)**
+- Two macOS installers are now provided, each bundling a native JDK 21 for its target architecture:
+  - `Tutu-x.x.x-macOS-ARM64.dmg` — for Apple Silicon Macs (M1 / M2 / M3 / M4). No Rosetta 2 required.
+  - `Tutu-x.x.x-macOS-Intel.dmg` — for Intel Macs.
+- The previous single `Tutu-x.x.x-macOS.dmg` (which bundled an Intel JVM and required Rosetta 2 on Apple Silicon) is no longer provided.
+
+---
+
 ### v1.1.3 — 2026-06-17
 
 **Retirement Projection — Savings-first withdrawal (new)**
