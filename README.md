@@ -131,6 +131,23 @@ Email us at tutu.retirement.planning@gmail.com. This is only a hobby project so 
 
 ## Release Notes
 
+### v1.1.6 — 2026-07-12
+
+**Bug fix — macOS auto-update downloads wrong architecture installer (fix)**
+- When clicking "Update" on a Mac, Tutu was picking the first DMG it found in the release assets instead of the one matching the machine's CPU architecture.
+- On Apple Silicon Macs this meant the Intel installer was sometimes downloaded, producing an app that would silently fail to launch after the update.
+- Fixed by detecting `os.arch` at runtime: `aarch64` → downloads the ARM64 DMG; `x86_64` → downloads the Intel DMG. Falls back to the legacy single-DMG naming used in releases before v1.1.3.
+
+**Life Events — "Update House Purpose" dialog improvements (improvement)**
+- The property picker now excludes properties that have already been sold (via a "Sell a House" event) by the event's start year — only available properties are offered.
+- The "New purpose" dropdown now automatically excludes the property's current purpose, so only valid transitions are shown (e.g. a Rental property offers Residence and Vacation Home).
+
+**Life Events list — "Update House Purpose" inline details (improvement)**
+- The Life Events list now shows the property name (read-only) and new purpose (editable dropdown) for "Update House Purpose" events.
+- The new purpose can be changed and saved directly from the list without reopening the dialog.
+
+---
+
 ### v1.1.5 — 2026-07-12
 
 **Life Events — New "Update House Purpose" event (new)**
