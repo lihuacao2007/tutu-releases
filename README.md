@@ -131,6 +131,20 @@ Email us at tutu.retirement.planning@gmail.com. This is only a hobby project so 
 
 ## Release Notes
 
+### v1.1.5 — 2026-07-12
+
+**Life Events — New "Update House Purpose" event (new)**
+- A new life event type **"Update House Purpose"** lets you schedule a future change to a property's purpose (e.g. Rental → Residence, Rental → Vacation Home, Residence → Rental).
+- From the event year forward, the property's rental income is removed from the retirement projection, reflecting the change in use.
+- The property picker only shows properties that have not already been sold (via a "Sell a House" event) by the event's start year.
+- The "New purpose" dropdown automatically excludes the property's current purpose so only valid transitions are offered.
+
+**Life Events list — "Update House Purpose" inline details (improvement)**
+- The life event list now shows full details for "Update House Purpose" events: the property name (read-only) and the new purpose (editable dropdown).
+- The new purpose can be changed directly from the list and saved without reopening the dialog.
+
+---
+
 ### v1.1.4 — 2026-07-05
 
 **Bug fix — Rental income going negative after selling a rental property (fix)**
